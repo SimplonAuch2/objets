@@ -28,8 +28,13 @@ La manipulation des objets se fait en deux étapes :
  ```php
 class Pomme
 {
-	public $nom = ;
+	public $nom = 'pomme';
 	public $valeur_nutritive = 10;
+
+	public static function afficher()
+	{
+		echo '<img src="pomme.png" alt="une pomme !" />';
+	}
 }
 
 class Personne
@@ -48,6 +53,11 @@ class Personne
 		$this->estomac += $aliment->valeur_nutritive;
 	}
 }
+
+$p = new Pomme();
+echo $p->nom ;
+
+Pomme::afficher();	// l'appel d'une méthode statique
 ```
 
 Notez que depuis une méthode, il est possible d'accéder aux paramètres et autres méthodes via le mot-clé très pratique 'this'.
