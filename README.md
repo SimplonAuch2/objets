@@ -8,7 +8,7 @@ Il est aussi possible de manipuler des listes de valeurs, chaque valeur étant i
 
 Un objet n'est rien de plus qu'un nouveau type, qui ressemble à un tableau associatif, mais qui peut contenir en plus des fonctions ! Un objet devient donc un ensemble de paramètres (des variables) et de méthodes (des fonctions).
 
-```
+```php
 $pomme = new Pomme();
 $pedro = new Personne();
 
@@ -25,7 +25,7 @@ La manipulation des objets se fait en deux étapes :
  - il est aussi possible de configurer une classe pour qu'elle soit utilisée directement, sans devoir générer d'instance. Cela s'appelle une classe statique.
 
 
- ```
+ ```php
 class Pomme
 {
 	public $nom = ;
@@ -54,7 +54,7 @@ Notez que depuis une méthode, il est possible d'accéder aux paramètres et aut
 
 Et les mots-clé 'public' et 'private' ? Il permettent de définir si les méthodes et paramètres de vos instances sont accessibles dans votre code. Exemple :
 
-```
+```php
 echo $personne->age;	// affiche l'âge
 echo $personne->action; // génère une erreur !
 ```
