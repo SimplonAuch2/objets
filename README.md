@@ -20,7 +20,7 @@ $pedro->manger( $pomme );
 ```
 
 La manipulation des objets se fait en deux étapes :
- - d'abord on définis la structure de l'objet : la classe (elle contient les paramètres et méthodes).
+ - d'abord on définit la structure de l'objet : la classe (elle contient les paramètres et méthodes).
  - ensuite, on génère des instances de cette classe. Vous avez remarqué le mot-clé "new" ? C'est exactement à ça qu'il sert !
  - il est aussi possible de configurer une classe pour qu'elle soit utilisée directement, sans devoir générer d'instance. Cela s'appelle une classe statique.
 
@@ -75,7 +75,7 @@ echo $personne->action; // génère une erreur !
 Faites des recherches, et retenez sur les termes suivants :
 - classe
 - objet ou instance
-- propriété
+- propriété ou paramètre
 - méthode
 - constructeur
 
