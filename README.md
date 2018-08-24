@@ -39,7 +39,9 @@ class Pomme
 
 class Personne
 {
-	public $age;
+	public $prenom;
+	public $nom;
+	public $naissance;
 	private $action;	// une valeur texte qui peut valoir 'marcher', 'dormir', 'assis'...
 	public $estomac;	// une valeur entière contenant la valeur du réservoir estomac ;)
 
@@ -62,12 +64,55 @@ Pomme::afficher();	// l'appel d'une méthode statique
 
 Notez que depuis une méthode, il est possible d'accéder aux paramètres et autres méthodes via le mot-clé très pratique 'this'.
 
+
+## visibilité (public/private)
+
 Et les mots-clé 'public' et 'private' ? Il permettent de définir si les méthodes et paramètres de vos instances sont accessibles dans votre code. Exemple :
 
 ```php
 echo $personne->age;	// affiche l'âge
 echo $personne->action; // génère une erreur !
 ```
+
+
+## constructeurs
+
+Imaginez maintenant : tous les objets 'Personne' que l'on instancie possèdent au départ le même nom... Par très intuitif, n'est-ce pas ? La syntaxe suivante serait plus cool, et plus claire :
+
+```php
+
+$rl = new Personne("Régis", "Laspalès", 1957);
+$pc = new Personne("Philippe", "Chevallier", 1956);
+
+echo $rl->age();
+```
+
+Vous découvrez la notion de constructeur ! Il s'agit d'une méthode qui s'exécute automatiquement quand on crée une nouvelle instance de Personne. Dans notre exemple, les paramètres $prenom, $nom et $naissance sont passés à cette méthode constructeur, dont dont le code correspondant est le suivant :
+
+```php
+class Personne
+{
+	public $prenom;
+	public $nom;
+	public $naissance;
+
+	// le nom constructeur s'appelle obligatoirement __construct ( avec deux "_" devant)
+	public function __construct($prenom, $nom, $naiss)	
+	{
+		$this->prenom = $prenom;
+		$this->nom = $nom;
+		$this->naissance = $naiss;
+	}
+
+	public function age()
+	{
+		$cette_annee = date("Y");
+		return $cette_annee - $this->naissance;
+	}
+}
+```
+
+
 
 		
 ## Glossaire
