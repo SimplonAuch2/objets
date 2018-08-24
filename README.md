@@ -132,13 +132,13 @@ Faites des recherches, et retenez sur les termes suivants :
 
 Créez les classes permettant de représenter le catalogue produits d'une pizzeria (pizzas, désserts, boissons...), ses clients et leurs commandes...
 
-#### Recettes de cuisine
-
-Créez les classes d'une application de gestion de recettes de cuisine.
-
 #### Le roi lion
 
 Créez les classes représentant le monde du vivant : animaux, végétaux, et faites en sorte que tout ce petit monde puisse vivre (manger bouger, mourir)
+
+#### Recettes de cuisine
+
+Créez les classes d'une application de gestion de recettes de cuisine.
 
 #### Pokemon
 

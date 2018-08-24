@@ -2,14 +2,12 @@
 
 
 
-class Pizza
+class Pizza extends Produit
 {
 
-	private $nom = '';
 	private $base = '';		// tomate ou crème fraiche
 	private $pate = '';		// épaisseur de la pâte
-	private $prix = 0;
-	private $etat = '';		// états : 'fabrication', 'prête', 'livrée'
+
 	private $ingredients = [];
 
 
@@ -29,16 +27,9 @@ class Pizza
 		$this->etat = 'prête';
 	}
 
-
-	public function livraison()
+	public function livrer()
 	{
-		$this->etat = 'prête';
-	}
-
-
-	public function html()
-	{
-		echo '<div class="' . get_class($this) . '">'  . $this->nom . '</div>';
+		$this->etat = 'livrée';
 	}
 
 }

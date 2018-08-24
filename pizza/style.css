@@ -1,5 +1,6 @@
 
-div {
+
+.Pizza {
 	display: inline-block;
 	width: 100px;
 	height: 120px;
@@ -9,13 +10,32 @@ div {
 	padding-top: 100px;
 	margin: 5px;
 	text-align: center;
-}
-
-.Pizza {
 	background-image: url(pizza.jpg);
 }
 
 
 .Boisson {
+	display: inline-block;
+	width: 100px;
+	height: 120px;
+	background: url(pizza.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-top: 100px;
+	margin: 5px;
+	text-align: center;
 	background-image: url(boisson.png);
+}
+
+.commande {
+	width: 400px;
+	border: 1px grey solid;
+}
+
+.commande p {
+	font-weight: bold;
+}
+
+.commande table {
+	background-color: lightGrey;
 }
