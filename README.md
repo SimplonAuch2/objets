@@ -9,7 +9,7 @@ Il est aussi possible de manipuler des listes de valeurs, chaque valeur étant i
 Un objet n'est rien de plus qu'un nouveau type, qui ressemble à un tableau associatif, mais qui peut contenir en plus des fonctions ! Un objet devient donc un ensemble de paramètres (des variables) et de méthodes (des fonctions).
 
 ```php
-$pomme = new Pomme();
+$pomme = new Fruit();
 $pedro = new Personne();
 
 echo $pedro->age;
@@ -26,7 +26,7 @@ La manipulation des objets se fait en deux étapes :
 
 
  ```php
-class Pomme
+class Fruit
 {
 	public $nom = 'pomme';
 	public $valeur_nutritive = 10;
@@ -39,9 +39,9 @@ class Pomme
 
 class Personne
 {
-	public $prenom;
-	public $nom;
-	public $naissance;
+	public $prenom = "Régis";
+	public $nom = "Laspalès";
+	public $naissance = 1957;
 	private $action;	// une valeur texte qui peut valoir 'marcher', 'dormir', 'assis'...
 	public $estomac;	// une valeur entière contenant la valeur du réservoir estomac ;)
 
@@ -56,10 +56,10 @@ class Personne
 	}
 }
 
-$p = new Pomme();
-echo $p->nom ;
+$f = new Fruit();
+echo $f->nom ;
 
-Pomme::afficher();	// l'appel d'une méthode statique
+Fruit::afficher();	// l'appel d'une méthode statique
 ```
 
 Notez que depuis une méthode, il est possible d'accéder aux paramètres et autres méthodes via le mot-clé très pratique 'this'.

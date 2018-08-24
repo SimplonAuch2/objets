@@ -1,0 +1,21 @@
+
+div {
+	display: inline-block;
+	width: 100px;
+	height: 120px;
+	background: url(pizza.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-top: 100px;
+	margin: 5px;
+	text-align: center;
+}
+
+.Pizza {
+	background-image: url(pizza.jpg);
+}
+
+
+.Boisson {
+	background-image: url(boisson.png);
+}
